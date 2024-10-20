@@ -16,13 +16,14 @@ import java.util.*;
 @RequestMapping("/users")
 public class UserController {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-    @Autowired
+
     private final UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
+
 
     // вернуть всех пользователей пользователя
     @GetMapping

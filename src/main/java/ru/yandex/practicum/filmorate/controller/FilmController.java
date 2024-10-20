@@ -15,7 +15,6 @@ import java.util.*;
 @RestController
 @RequestMapping("/films")
 public class FilmController {
-    private static final Logger logger = LoggerFactory.getLogger(FilmController.class);
     private final FilmService filmService;
 
     public FilmController(FilmService filmService) {
