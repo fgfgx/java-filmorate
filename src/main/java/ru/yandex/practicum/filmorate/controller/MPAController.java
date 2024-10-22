@@ -14,7 +14,6 @@ import java.util.Collection;
 @RequestMapping("/mpa")
 public class MPAController {
 
-    private static final Logger logger = LoggerFactory.getLogger(MPAController.class);
     private final MPAService mpaService;
 
     public MPAController(MPAService mpaService) {

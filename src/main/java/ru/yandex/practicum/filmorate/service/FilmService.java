@@ -30,7 +30,7 @@ public class FilmService {
     private final FilmDbStorage filmStorage;
 
     //метод для проверки фильма
-    void validateFilmsData(FilmDto film) {
+    private void validateFilmsData(FilmDto film) {
 
         if (film.getReleaseDate().isBefore(LocalDate.of(1895, Calendar.DECEMBER, 28))) {
             logger.error("дата релиза — не раньше 28 декабря 1895 года");
@@ -98,7 +98,6 @@ public class FilmService {
         return FilmMapper.mapToFilmDto(film.get());
     }
 
-    //
     public void addLike(Long filmId, Long userId) {
         Optional<User> user = userStorage.getUserById(userId);
         if (user.isEmpty()) {
@@ -113,7 +112,6 @@ public class FilmService {
         filmStorage.addLike(filmId, userId);
     }
 
-    //
     public void deleteLike(Long filmId, Long userId) {
         Optional<User> user = userStorage.getUserById(userId);
         if (user.isEmpty()) {

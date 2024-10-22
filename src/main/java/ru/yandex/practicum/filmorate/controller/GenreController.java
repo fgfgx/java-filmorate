@@ -13,7 +13,6 @@ import java.util.Collection;
 @RestController
 @RequestMapping("/genres")
 public class GenreController {
-    private static final Logger logger = LoggerFactory.getLogger(GenreController.class);
     private final GenreService genreService;
 
     public GenreController(GenreService genreService) {
